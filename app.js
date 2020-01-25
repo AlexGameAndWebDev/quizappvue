@@ -16,7 +16,7 @@ new Vue({
         button2: l2[i],
         button3: l3[i],
         result: '',
-        color: '',
+        color: '#a4adb1',
         value: '',
         retry: 'none',
         link: '',
@@ -66,7 +66,7 @@ new Vue({
             this.retry = 'none';
             this.result = '';
             c=0;
-            this.color = '';
+            this.color = '#a4adb1';
             this.link = '';
         }
     },
