@@ -18,16 +18,55 @@
         </a>
     </nav>
 
-    <div class="jumbotron" id="app" v-bind:style="{backgroundColor : color}" style="text-align:center;padding-bottom: 0;margin-bottom: 0;height: 300px;">
+    <div class="jumbotron" id="app" v-bind:style="{backgroundColor : color}" style="text-align:center;padding-bottom: 0;height: 300px;display: table-cell;
+    vertical-align: middle;">
         <h1>{{ question }}</h1>
-        <button v-on:click="check(button0)">{{ button0 }}</button>
-        <button v-on:click="check(button1)">{{ button1 }}</button>
-        <button v-on:click="check(button2)">{{ button2 }}</button>
-        <button v-on:click="check(button3)">{{ button3 }}</button>
-        <p>{{ result }}</p>
+        <button v-on:click="check(button0)" class="btn" v-bind:style="{display: value}">{{ button0 }}</button>
+        <button v-on:click="check(button1)" class="btn" v-bind:style="{display: value}">{{ button1 }}</button>
+        <button v-on:click="check(button2)" class="btn" v-bind:style="{display: value}">{{ button2 }}</button>
+        <button v-on:click="check(button3)" class="btn" v-bind:style="{display: value}">{{ button3 }}</button>
+        <h4 style="color: #fff;">{{ result }}</h4>
+        <button v-bind:style="{display: retry}" v-on:click="redo()" class="btn">Retry</button>
+        <div class="btn" v-bind:style="{display: retry}"><a v-bind:href="link" style="color:#fff">Condividi il punteggio su <img style="margin-left:4px;" src="https://web.whatsapp.com/img/favicon/1x/favicon.png" width="25px" height="25px"></a></div>
     </div>
 
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQBj7fP9yiT29aOecDgWVRmg34Yp_VI0ecxYEsHQWJxwzEW09RLYxctCkEJpgC1jdPUvVelYnYrTs7A/embed?start=false&loop=false&delayms=60000" frameborder="0" width="100%" height="320" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <iframe style="margin-bottom: 20px;" src="https://docs.google.com/presentation/d/e/2PACX-1vQBj7fP9yiT29aOecDgWVRmg34Yp_VI0ecxYEsHQWJxwzEW09RLYxctCkEJpgC1jdPUvVelYnYrTs7A/embed?start=false&loop=false&delayms=60000" frameborder="0" width="100%" height="320" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+    <!-- Footer -->
+    <footer class="page-footer footer-special-dark bg-dark" style="color: #fff;">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+    
+        <!-- Grid row -->
+        <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+    
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold">Informazioni utili:</h5>
+            <p>Questo è una web app sviluppata da Alessandro Belotti per un progetto sull'imperatore romano Commodo. Su questo sito potrai esercitati tramite un quiz e ripassare con una presentazione.</p>
+    
+            </div>
+            </div>
+            <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Text -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background-color: #23272b;">© 2020 Copyright:
+        <a href="https://alessandrobelotti.firebaseapp.com"> Belotti Design</a>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!-- Footer -->
 
     <script src="app.js"></script>
 </body>
