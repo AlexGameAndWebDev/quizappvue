@@ -17,34 +17,57 @@ new Vue({
         button3: l3[i],
         result: '',
         color: '',
+        value: '',
+        retry: 'none',
+        link: '',
     },
     methods: {
         check: function(val){
             if(i<4){
                 if (this.question == list[i] && val == correct[i]){
-                    console.log('Correct' + " " + this.question + " " + val + " " + correct[i]);
                     this.question = list[++i];
                     this.button0 = l0[i];
                     this.button1 = l1[i];
                     this.button2 = l2[i];
                     this.button3 = l3[i];
-                    this.color = 'green';
+                    this.color = '#45ad4b';
                     c++;
                 } else {
-                    console.log('Error');
                     this.question = list[++i];
                     this.button0 = l0[i];
                     this.button1 = l1[i];
                     this.button2 = l2[i];
                     this.button3 = l3[i];
-                    this.color = 'red';
-                    
+                    this.color = '#d64b4b';
                 }
                 if(i==4){
-                    this.result = "Il tuo risultato è "+(c*25).toString()+"%";
-                    this.color = '';
+                    if(c*25>50){
+                        this.color = '#45ad4b';
+                        this.result = "Hai ottenuto un punteggio del "+(c*25).toString()+"%. Bravo ;)";
+                        this.link = 'whatsapp://send?text=Ho fatto ' + c + ' punti nel quiz su Commodo';
+                    } else {
+                        this.color = '#d64b4b';
+                        this.result = "Hai ottenuto un punteggio del "+(c*25).toString()+"%. Potevi fare di meglio :(";
+                        this.link = 'whatsapp://send?text=Ho fatto ' + c + ' punti nel quiz su Commodo';
+                    }
+                    this.value = 'none';
+                    this.retry = '';
                 }
             }
         },
+        redo: function(){
+            i = 0;
+            this.question = list[i];
+            this.button0 = l0[i];
+            this.button1 = l1[i];
+            this.button2 = l2[i];
+            this.button3 = l3[i];
+            this.value = '';
+            this.retry = 'none';
+            this.result = '';
+            c=0;
+            this.color = '';
+            this.link = '';
+        }
     },
 });
