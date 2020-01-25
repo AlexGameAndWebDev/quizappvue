@@ -48,7 +48,7 @@ new Vue({
                     } else {
                         this.color = '#d64b4b';
                         this.result = "Hai ottenuto un punteggio del "+(c*25).toString()+"%. Potevi fare di meglio :(";
-                        this.link = 'whatsapp://send?text=Ho fatto ' + c*25 + ' punti nel quiz su Commodo';
+                        this.link = 'whatsapp://send?text=Ho fatto ' + c*25 + '% nel quiz su Commodo';
                     }
                     this.value = 'none';
                     this.retry = '';
