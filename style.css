@@ -1,0 +1,16 @@
+body {
+    margin-inline-start: 0;
+    background-color: #343a40;
+}
+
+.btn {
+    background-color: #343a40;
+    border: 2px solid #111111;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 4px;
+}
+.btn :hover {
+    background-color: #474747;
+}
