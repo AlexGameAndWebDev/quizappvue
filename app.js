@@ -34,7 +34,7 @@ new Vue({
                     c++;
                 } else {
                     this.question = list[++i];
-                    this.button0 = l0[i];
+                    this.button0 = l0[i]; 
                     this.button1 = l1[i];
                     this.button2 = l2[i];
                     this.button3 = l3[i];
